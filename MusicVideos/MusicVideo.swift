@@ -13,6 +13,13 @@ class Videos {
     private var _vName: String
     private var _vImageUrl: String
     private var _vVideoUrl: String
+    private var _vRights: String
+    private var _vPrice: String
+    private var _vArtist: String
+    private var _vGenre: String
+    private var _vLinkToiTunes: String
+    private var _vReleaseDte: String
+    private var _vImid: String
     
     var vName: String {
         return _vName
@@ -24,6 +31,34 @@ class Videos {
     
     var vVideoUrl: String {
         return _vVideoUrl
+    }
+    
+    var vRights: String {
+        return _vRights
+    }
+    
+    var vPrice: String {
+        return _vPrice
+    }
+    
+    var vArtist: String {
+        return _vArtist
+    }
+    
+    var vGenre: String {
+        return _vGenre
+    }
+    
+    var vLinkToiTunes: String {
+        return _vLinkToiTunes
+    }
+    
+    var vReleaseDte: String {
+        return _vReleaseDte
+    }
+    
+    var vImid: String {
+        return _vImid
     }
     
     init(data: JSONDictionary) {
@@ -49,6 +84,53 @@ class Videos {
         }
         
         
+        if let rights = data["rights"] as? JSONDictionary, vRights = rights["label"] as? String {
+            self._vRights = vRights
+        } else {
+            self._vRights = ""
+        }
+        
+        
+        if let price = data["im:price"] as? JSONDictionary, vPrice = price["label"] as? String {
+            self._vPrice = vPrice
+        } else {
+            self._vPrice = ""
+        }
+        
+        
+        if let artist = data["im:artist"] as? JSONDictionary, vArtist = artist["label"] as? String {
+            self._vArtist = vArtist
+        } else {
+            self._vArtist = ""
+        }
+        
+        
+        if let genre = data["category"] as? JSONDictionary, attr = genre["attributes"] as? JSONDictionary, vGenre = attr["term"] as? String {
+            self._vGenre = vGenre
+        } else {
+            self._vGenre = ""
+        }
+        
+        
+        if let link = data["id"] as? JSONDictionary, vLinkToiTunes = link["label"] as? String {
+            self._vLinkToiTunes = vLinkToiTunes
+        } else {
+            self._vLinkToiTunes = ""
+        }
+        
+        
+        if let release = data["im:releaseDate"] as? JSONDictionary, attr = release["attributes"] as? JSONDictionary, vReleaseDte = attr["label"] as? String {
+            self._vReleaseDte = vReleaseDte
+        } else {
+            self._vReleaseDte = ""
+        }
+        
+        
+        if let imid = data["id"] as? JSONDictionary, attr = imid["attributes"] as? JSONDictionary, vImid = attr["im:id"] as? String {
+            self._vImid = vImid
+        } else {
+            self._vImid = ""
+        }
     }
     
     
