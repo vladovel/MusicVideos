@@ -32,7 +32,7 @@ class APIManager {
                 
                 //Added for JSONSerialization
                 
-                print(data)
+               print(data)
                 
                 
                 do {
