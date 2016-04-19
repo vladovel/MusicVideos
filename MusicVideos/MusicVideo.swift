@@ -21,6 +21,8 @@ class Videos {
     private var _vReleaseDte: String
     private var _vImid: String
     
+    var vImageData: NSData?
+    
     var vName: String {
         return _vName
     }
