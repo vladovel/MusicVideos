@@ -15,11 +15,28 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSY-RJ-Slz">
+                                <rect key="frame" x="0.0" y="289" width="600" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="eSY-RJ-Slz" secondAttribute="trailing" id="dOt-Wp-ukb"/>
+                            <constraint firstItem="eSY-RJ-Slz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lFl-ai-3DG"/>
+                            <constraint firstItem="eSY-RJ-Slz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="q4f-5I-L0U"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="displayLabel" destination="eSY-RJ-Slz" id="wMK-fH-V3K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="545" y="317"/>
         </scene>
     </scenes>
 </document>
