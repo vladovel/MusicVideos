@@ -21,40 +21,44 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="131"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mn5-C3-IGK">
-                                            <rect key="frame" x="126" y="8" width="35" height="115"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="0d0-7Q-7SP">
+                                            <rect key="frame" x="8" y="8" width="584" height="115"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gqu-BS-OUl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="110" id="i4a-tI-tKG"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="XcB-3S-nbY">
+                                                    <rect key="frame" x="110" y="0.0" width="474" height="31"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mn5-C3-IGK">
+                                                            <rect key="frame" x="0.0" y="0.0" width="28" height="14"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Music Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUg-Su-4l4">
+                                                            <rect key="frame" x="0.0" y="14" width="68" height="17"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="35" id="qSZ-jx-JZc"/>
+                                                <constraint firstAttribute="bottom" secondItem="gqu-BS-OUl" secondAttribute="bottom" constant="5" id="H0a-aL-Ggt"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUg-Su-4l4">
-                                            <rect key="frame" x="169" y="8" width="423" height="113"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gqu-BS-OUl">
-                                            <rect key="frame" x="8" y="8" width="110" height="113"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="110" id="VnM-3P-bkK"/>
-                                            </constraints>
-                                        </imageView>
+                                        </stackView>
                                     </subviews>
                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstItem="aUg-Su-4l4" firstAttribute="trailing" secondItem="abJ-7y-7tR" secondAttribute="trailingMargin" id="0yR-9U-NrU"/>
-                                        <constraint firstItem="Mn5-C3-IGK" firstAttribute="leading" secondItem="gqu-BS-OUl" secondAttribute="trailing" constant="8" symbolic="YES" id="1wP-no-boF"/>
-                                        <constraint firstItem="aUg-Su-4l4" firstAttribute="leading" secondItem="Mn5-C3-IGK" secondAttribute="trailing" constant="8" symbolic="YES" id="3mA-5r-KdJ"/>
-                                        <constraint firstItem="Mn5-C3-IGK" firstAttribute="top" secondItem="aUg-Su-4l4" secondAttribute="top" id="8Tt-xv-RBr"/>
-                                        <constraint firstItem="gqu-BS-OUl" firstAttribute="top" secondItem="abJ-7y-7tR" secondAttribute="topMargin" id="C7k-Ze-5Tx"/>
-                                        <constraint firstItem="gqu-BS-OUl" firstAttribute="leading" secondItem="abJ-7y-7tR" secondAttribute="leadingMargin" id="CMr-k7-tfb"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="gqu-BS-OUl" secondAttribute="bottom" constant="2" id="pCU-VQ-8ao"/>
-                                        <constraint firstItem="gqu-BS-OUl" firstAttribute="top" secondItem="Mn5-C3-IGK" secondAttribute="top" id="pyU-c5-bOL"/>
-                                        <constraint firstItem="Mn5-C3-IGK" firstAttribute="bottom" secondItem="abJ-7y-7tR" secondAttribute="bottomMargin" id="qYl-uO-z3a"/>
-                                        <constraint firstItem="gqu-BS-OUl" firstAttribute="bottom" secondItem="aUg-Su-4l4" secondAttribute="bottom" id="r0Y-sN-617"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="0d0-7Q-7SP" secondAttribute="trailing" id="011-UL-fpP"/>
+                                        <constraint firstItem="0d0-7Q-7SP" firstAttribute="top" secondItem="abJ-7y-7tR" secondAttribute="topMargin" id="6b1-NQ-Fpe"/>
+                                        <constraint firstItem="0d0-7Q-7SP" firstAttribute="leading" secondItem="abJ-7y-7tR" secondAttribute="leadingMargin" id="SFO-Ah-MNf"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="0d0-7Q-7SP" secondAttribute="bottom" id="qeZ-YP-DSm"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
