@@ -20,6 +20,7 @@ class MusicVideoTableViewCell: UITableViewCell {
     @IBOutlet weak var musicImage: UIImageView!
     @IBOutlet weak var rank: UILabel!
     @IBOutlet weak var musicTitle: UILabel!
+    
 
     func updateCell() {
         

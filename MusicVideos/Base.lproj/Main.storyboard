@@ -14,57 +14,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="132" id="fux-qc-l8d" customClass="MusicVideoTableViewCell" customModule="MusicVideos" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="132"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="140" id="fux-qc-l8d" customClass="MusicVideoTableViewCell" customModule="MusicVideos" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fux-qc-l8d" id="abJ-7y-7tR">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="131"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="139"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="0d0-7Q-7SP">
-                                            <rect key="frame" x="8" y="8" width="584" height="115"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="sXh-Lr-FLr">
+                                            <rect key="frame" x="8" y="8" width="584" height="123"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gqu-BS-OUl">
-                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QcV-Pi-tGe">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="123"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="110" id="i4a-tI-tKG"/>
+                                                        <constraint firstAttribute="width" constant="120" id="zSz-Mg-6Hj"/>
                                                     </constraints>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="XcB-3S-nbY">
-                                                    <rect key="frame" x="110" y="0.0" width="474" height="31"/>
+                                                <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SDw-lw-lu4">
+                                                    <rect key="frame" x="136" y="0.0" width="448" height="50"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mn5-C3-IGK">
-                                                            <rect key="frame" x="0.0" y="0.0" width="28" height="14"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kY4-Oz-ej5">
+                                                            <rect key="frame" x="0.0" y="0.0" width="39" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Music Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUg-Su-4l4">
-                                                            <rect key="frame" x="0.0" y="14" width="68" height="17"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="gP0-GB-HPl">
+                                                            <rect key="frame" x="0.0" y="29" width="42" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="gqu-BS-OUl" secondAttribute="bottom" constant="5" id="H0a-aL-Ggt"/>
-                                            </constraints>
                                         </stackView>
                                     </subviews>
                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="0d0-7Q-7SP" secondAttribute="trailing" id="011-UL-fpP"/>
-                                        <constraint firstItem="0d0-7Q-7SP" firstAttribute="top" secondItem="abJ-7y-7tR" secondAttribute="topMargin" id="6b1-NQ-Fpe"/>
-                                        <constraint firstItem="0d0-7Q-7SP" firstAttribute="leading" secondItem="abJ-7y-7tR" secondAttribute="leadingMargin" id="SFO-Ah-MNf"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="0d0-7Q-7SP" secondAttribute="bottom" id="qeZ-YP-DSm"/>
+                                        <constraint firstItem="sXh-Lr-FLr" firstAttribute="bottom" secondItem="abJ-7y-7tR" secondAttribute="bottomMargin" id="L2S-RG-r3o"/>
+                                        <constraint firstItem="sXh-Lr-FLr" firstAttribute="top" secondItem="abJ-7y-7tR" secondAttribute="topMargin" id="Z6s-gX-SY8"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="sXh-Lr-FLr" secondAttribute="trailing" id="fWs-fO-MBU"/>
+                                        <constraint firstItem="sXh-Lr-FLr" firstAttribute="leading" secondItem="abJ-7y-7tR" secondAttribute="leadingMargin" id="r9g-gP-1ua"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="musicImage" destination="gqu-BS-OUl" id="b47-7S-aNR"/>
-                                    <outlet property="musicTitle" destination="aUg-Su-4l4" id="OAS-ss-lFd"/>
-                                    <outlet property="rank" destination="Mn5-C3-IGK" id="xUr-9n-bPb"/>
+                                    <outlet property="musicImage" destination="QcV-Pi-tGe" id="Xz1-Lf-Oez"/>
+                                    <outlet property="musicTitle" destination="gP0-GB-HPl" id="aio-fD-m5Y"/>
+                                    <outlet property="rank" destination="kY4-Oz-ej5" id="5F5-Jt-Kg6"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
