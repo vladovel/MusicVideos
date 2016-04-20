@@ -38,6 +38,15 @@ class ViewController: UIViewController {
         
         for (index, item) in videos.enumerate() {
             print("\(index). Name = \(item.vName)")
+            print("\(index). Name = \(item.vImageUrl)")
+            print("\(index). Name = \(item.vVideoUrl)")
+            print("\(index). Name = \(item.vRights)")
+            print("\(index). Name = \(item.vPrice)")
+            print("\(index). Name = \(item.vArtist)")
+            print("\(index). Name = \(item.vGenre)")
+            print("\(index). Name = \(item.vLinkToiTunes)")
+            print("\(index). Name = \(item.vReleaseDte)")
+            print("\(index). Name = \(item.vImid)")
            
         }
     
