@@ -89,7 +89,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let video = videos[indexPath.row]
         
-        cell.textLabel?.text = ("\(indexPath.row + 1)")
+        cell.textLabel?.text = "\(video.vRank)"
         cell.detailTextLabel?.text = video.vName
         
         return cell
