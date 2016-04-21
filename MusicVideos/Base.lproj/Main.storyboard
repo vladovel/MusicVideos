@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xrg-1z-E9W">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -21,26 +22,28 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="139"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="sXh-Lr-FLr">
-                                            <rect key="frame" x="8" y="8" width="584" height="123"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vHR-KK-EaE">
+                                            <rect key="frame" x="8" y="8" width="584" height="120"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QcV-Pi-tGe">
-                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="123"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QcV-Pi-tGe">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="120" id="zSz-Mg-6Hj"/>
+                                                        <constraint firstAttribute="width" secondItem="QcV-Pi-tGe" secondAttribute="height" multiplier="1:1" id="3mV-M9-smf"/>
+                                                        <constraint firstAttribute="width" constant="120" id="KfU-On-rVs"/>
+                                                        <constraint firstAttribute="height" constant="120" id="W3z-Dk-lS2"/>
                                                     </constraints>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SDw-lw-lu4">
-                                                    <rect key="frame" x="136" y="0.0" width="448" height="50"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="1pd-Cl-1fk">
+                                                    <rect key="frame" x="128" y="0.0" width="456" height="120"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kY4-Oz-ej5">
-                                                            <rect key="frame" x="0.0" y="0.0" width="39" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="456" height="58"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="gP0-GB-HPl">
-                                                            <rect key="frame" x="0.0" y="29" width="42" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="gP0-GB-HPl">
+                                                            <rect key="frame" x="0.0" y="62" width="456" height="58"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -52,10 +55,10 @@
                                     </subviews>
                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstItem="sXh-Lr-FLr" firstAttribute="bottom" secondItem="abJ-7y-7tR" secondAttribute="bottomMargin" id="L2S-RG-r3o"/>
-                                        <constraint firstItem="sXh-Lr-FLr" firstAttribute="top" secondItem="abJ-7y-7tR" secondAttribute="topMargin" id="Z6s-gX-SY8"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="sXh-Lr-FLr" secondAttribute="trailing" id="fWs-fO-MBU"/>
-                                        <constraint firstItem="sXh-Lr-FLr" firstAttribute="leading" secondItem="abJ-7y-7tR" secondAttribute="leadingMargin" id="r9g-gP-1ua"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="vHR-KK-EaE" secondAttribute="bottom" constant="3" id="7Ik-Sk-zjy"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="vHR-KK-EaE" secondAttribute="trailing" id="l4x-cS-0OQ"/>
+                                        <constraint firstItem="vHR-KK-EaE" firstAttribute="leading" secondItem="abJ-7y-7tR" secondAttribute="leadingMargin" id="qX8-if-IQv"/>
+                                        <constraint firstItem="vHR-KK-EaE" firstAttribute="top" secondItem="abJ-7y-7tR" secondAttribute="topMargin" id="wQV-dD-ZF0"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -74,7 +77,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D4C-Nq-c2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1972" y="284"/>
+            <point key="canvasLocation" x="1766" y="285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ehg-CC-cUd">
