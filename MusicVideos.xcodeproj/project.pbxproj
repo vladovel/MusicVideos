@@ -20,6 +20,7 @@
 		3F7F4CDC1CC7B05800991536 /* MusicVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F4CDB1CC7B05800991536 /* MusicVideoTableViewCell.swift */; };
 		3FAECC081CC77B09009ADCF3 /* MusicVideoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAECC071CC77B09009ADCF3 /* MusicVideoTVC.swift */; };
 		3FD86BF31CC64B43000A594A /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD86BF21CC64B43000A594A /* Reachability.m */; };
+		3FECC4D31CCE16C3003DFC54 /* MusicVideoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FECC4D21CCE16C3003DFC54 /* MusicVideoDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		3FD86BF01CC64B41000A594A /* MusicVideos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicVideos-Bridging-Header.h"; sourceTree = "<group>"; };
 		3FD86BF11CC64B43000A594A /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		3FD86BF21CC64B43000A594A /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		3FECC4D21CCE16C3003DFC54 /* MusicVideoDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 		3F3438671CC4DC6100E84461 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3FECC4D21CCE16C3003DFC54 /* MusicVideoDetailVC.swift */,
 				3FAECC071CC77B09009ADCF3 /* MusicVideoTVC.swift */,
 				3F7F4CDB1CC7B05800991536 /* MusicVideoTableViewCell.swift */,
 				3F34383A1CC4DA2B00E84461 /* ViewController.swift */,
@@ -330,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F34386B1CC4E6DF00E84461 /* APIManager.swift in Sources */,
+				3FECC4D31CCE16C3003DFC54 /* MusicVideoDetailVC.swift in Sources */,
 				3F34383B1CC4DA2B00E84461 /* ViewController.swift in Sources */,
 				3F3438701CC513E200E84461 /* MusicVideo.swift in Sources */,
 				3F7F4CDC1CC7B05800991536 /* MusicVideoTableViewCell.swift in Sources */,
