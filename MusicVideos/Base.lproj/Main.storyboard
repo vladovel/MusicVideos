@@ -134,20 +134,51 @@
                         <constraints>
                             <constraint firstItem="o4i-L6-qCJ" firstAttribute="leading" secondItem="vpq-Rz-JsZ" secondAttribute="leadingMargin" id="2rW-Pu-nf2"/>
                             <constraint firstItem="o4i-L6-qCJ" firstAttribute="centerY" secondItem="OCW-Ky-zTk" secondAttribute="centerY" id="31Y-MH-p8k"/>
-                            <constraint firstAttribute="trailing" secondItem="dSi-8o-rAz" secondAttribute="trailing" id="6cK-ta-d7C"/>
+                            <constraint firstItem="dSi-8o-rAz" firstAttribute="top" secondItem="d7P-qF-8Xt" secondAttribute="bottom" constant="68" id="4VO-hP-0ts"/>
+                            <constraint firstAttribute="trailing" secondItem="dSi-8o-rAz" secondAttribute="trailing" id="6cK-ta-d7C">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="OCW-Ky-zTk" firstAttribute="trailing" secondItem="vpq-Rz-JsZ" secondAttribute="trailingMargin" id="6sY-4M-Jc8"/>
                             <constraint firstItem="dSi-8o-rAz" firstAttribute="leading" secondItem="Y6T-Ps-tVy" secondAttribute="leading" id="AYE-rA-nUN"/>
                             <constraint firstItem="Y6T-Ps-tVy" firstAttribute="top" secondItem="o4i-L6-qCJ" secondAttribute="bottom" constant="8" symbolic="YES" id="JND-hE-qJu"/>
-                            <constraint firstItem="dSi-8o-rAz" firstAttribute="top" secondItem="d7P-qF-8Xt" secondAttribute="bottom" constant="68" id="OdD-Cz-6OJ"/>
+                            <constraint firstItem="dSi-8o-rAz" firstAttribute="top" secondItem="d7P-qF-8Xt" secondAttribute="bottom" constant="68" id="OdD-Cz-6OJ">
+                                <variation key="heightClass=compact" constant="180"/>
+                            </constraint>
                             <constraint firstItem="o4i-L6-qCJ" firstAttribute="baseline" secondItem="OCW-Ky-zTk" secondAttribute="baseline" id="PuE-3B-Ya9"/>
                             <constraint firstItem="h2v-4x-ing" firstAttribute="centerX" secondItem="dSi-8o-rAz" secondAttribute="centerX" id="Vqq-iD-Ay1"/>
                             <constraint firstItem="o4i-L6-qCJ" firstAttribute="top" secondItem="dSi-8o-rAz" secondAttribute="bottom" constant="1" id="aeO-0r-J7l"/>
                             <constraint firstItem="h2v-4x-ing" firstAttribute="top" secondItem="d7P-qF-8Xt" secondAttribute="bottom" id="cM3-00-psR"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="dSi-8o-rAz" secondAttribute="bottom" constant="43" id="gMd-Uo-wpc"/>
                             <constraint firstItem="h2v-4x-ing" firstAttribute="leading" secondItem="vpq-Rz-JsZ" secondAttribute="leadingMargin" constant="-13" id="j8h-LY-29X"/>
                             <constraint firstItem="dSi-8o-rAz" firstAttribute="trailing" secondItem="Y6T-Ps-tVy" secondAttribute="trailing" id="qKO-EY-Eet"/>
                             <constraint firstItem="Y6T-Ps-tVy" firstAttribute="bottom" secondItem="15I-eX-k9A" secondAttribute="top" id="qeC-fj-Hgc"/>
                             <constraint firstItem="h2v-4x-ing" firstAttribute="centerX" secondItem="vpq-Rz-JsZ" secondAttribute="centerX" id="xXr-Mx-usW"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4VO-hP-0ts"/>
+                                <exclude reference="gMd-Uo-wpc"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <exclude reference="o4i-L6-qCJ"/>
+                                <exclude reference="OCW-Ky-zTk"/>
+                                <exclude reference="Y6T-Ps-tVy"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="2rW-Pu-nf2"/>
+                                <exclude reference="31Y-MH-p8k"/>
+                                <exclude reference="PuE-3B-Ya9"/>
+                                <exclude reference="aeO-0r-J7l"/>
+                                <exclude reference="JND-hE-qJu"/>
+                                <exclude reference="qeC-fj-Hgc"/>
+                                <exclude reference="6sY-4M-Jc8"/>
+                                <include reference="Vqq-iD-Ay1"/>
+                                <exclude reference="4VO-hP-0ts"/>
+                                <include reference="gMd-Uo-wpc"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems>
                         <barButtonItem systemItem="play" id="6d1-bA-brm">
