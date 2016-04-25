@@ -21,13 +21,18 @@ class MusicVideoDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = video.vArtist
 
         vName.text = video.vName
         vGenre.text = video.vGenre
         vPrice.text = video.vPrice
         vRights.text = video.vRights
-        vImage.image = UIImage(data: video.vImageData!)
-        
+        if video.vImageData != nil {
+            vImage.image = UIImage(data: video.vImageData!)
+        } else {
+            vImage.image = UIImage(named: "imageNotAvailable")
+        }
     }
 
    

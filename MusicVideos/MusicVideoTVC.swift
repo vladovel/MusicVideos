@@ -124,6 +124,7 @@ class MusicVideoTVC: UITableViewController {
 
     private struct storyboard {
         static let cellReuseIdentifier = "cell"
+        static let segueIdentifier = "musicDetail"
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -184,7 +185,7 @@ class MusicVideoTVC: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         if let detailVC = segue.destinationViewController as? MusicVideoDetailVC {
-        
+         
             // Pass the selected object to the new view controller.
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 detailVC.video = videos[indexPath.row]
