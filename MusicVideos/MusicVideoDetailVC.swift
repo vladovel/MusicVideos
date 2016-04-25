@@ -10,17 +10,30 @@ import UIKit
 
 class MusicVideoDetailVC: UIViewController {
 
+    
+    @IBOutlet weak var vName: UILabel!
+    @IBOutlet weak var vImage: UIImageView!
+    @IBOutlet weak var vGenre: UILabel!
+    @IBOutlet weak var vPrice: UILabel!
+    @IBOutlet weak var vRights: UILabel!
+    
+    var video: Videos!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        vName.text = video.vName
+        vGenre.text = video.vGenre
+        vPrice.text = video.vPrice
+        vRights.text = video.vRights
+        vImage.image = UIImage(data: video.vImageData!)
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+   
+    @IBAction func playVideo(sender: AnyObject) {
+        print(video.vName)
     }
-    
 
     /*
     // MARK: - Navigation

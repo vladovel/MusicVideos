@@ -11,6 +11,7 @@ import UIKit
 class MusicVideoTVC: UITableViewController {
 
     var videos = [Videos]()
+    var video: Videos!
     
    
     
@@ -136,6 +137,10 @@ class MusicVideoTVC: UITableViewController {
 
     }
     
+//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        video = videos[indexPath.row]
+//    }
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -172,14 +177,20 @@ class MusicVideoTVC: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let detailVC = segue.destinationViewController as? MusicVideoDetailVC {
+        
+            // Pass the selected object to the new view controller.
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                detailVC.video = videos[indexPath.row]
+            }
+        }
     }
-    */
+    
 
 }

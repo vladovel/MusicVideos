@@ -120,7 +120,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rights" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6T-Ps-tVy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rights" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6T-Ps-tVy">
                                 <rect key="frame" x="1" y="458" width="599" height="98"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="98" id="gJZ-pF-hXp"/>
@@ -152,12 +152,22 @@
                     <toolbarItems>
                         <barButtonItem systemItem="play" id="6d1-bA-brm">
                             <color key="tintColor" red="1" green="0.0" blue="0.25425197838429625" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="playVideo:" destination="jmT-1g-Cs9" id="ExV-Tt-mGf"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="1FK-E7-c3c"/>
                         <barButtonItem systemItem="action" id="X4r-Yc-lhI">
                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </toolbarItems>
+                    <connections>
+                        <outlet property="vGenre" destination="o4i-L6-qCJ" id="qbE-Ie-awx"/>
+                        <outlet property="vImage" destination="dSi-8o-rAz" id="eyF-aA-o4N"/>
+                        <outlet property="vName" destination="h2v-4x-ing" id="tUW-J0-sib"/>
+                        <outlet property="vPrice" destination="OCW-Ky-zTk" id="nXB-oQ-HLd"/>
+                        <outlet property="vRights" destination="Y6T-Ps-tVy" id="rj9-sk-TPJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQa-HU-Qag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
