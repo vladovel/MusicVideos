@@ -80,10 +80,16 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="NYb-QH-Vj5"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="wPn-sQ-fnj">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="refresh:" destination="vJp-e5-KZ2" eventType="valueChanged" id="yeL-Y2-ijP"/>
+                        </connections>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D4C-Nq-c2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2083" y="261"/>
+            <point key="canvasLocation" x="2016" y="261"/>
         </scene>
         <!--SettingTVC-->
         <scene sceneID="dR1-4T-fJr">
@@ -216,17 +222,21 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibn-43-TrC">
-                                                    <rect key="frame" x="8" y="8" width="584" height="75"/>
+                                                    <rect key="frame" x="560" y="26" width="16" height="17"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of Music Videos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Atc-Z1-UYc">
+                                                    <rect key="frame" x="8" y="31" width="159" height="17"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ibn-43-TrC" firstAttribute="top" secondItem="AxU-3M-X6q" secondAttribute="topMargin" id="4LO-Wi-vnX"/>
-                                                <constraint firstItem="ibn-43-TrC" firstAttribute="trailing" secondItem="AxU-3M-X6q" secondAttribute="trailingMargin" id="Pxd-pG-SeV"/>
-                                                <constraint firstAttribute="bottom" secondItem="ibn-43-TrC" secondAttribute="bottom" id="Qyk-fD-1je"/>
-                                                <constraint firstItem="ibn-43-TrC" firstAttribute="leading" secondItem="AxU-3M-X6q" secondAttribute="leadingMargin" id="Qz3-nX-MUe"/>
+                                                <constraint firstItem="ibn-43-TrC" firstAttribute="top" secondItem="AxU-3M-X6q" secondAttribute="topMargin" constant="18" id="Qp5-wD-Rus"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ibn-43-TrC" secondAttribute="trailing" constant="16" id="wNe-aF-QfU"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -238,16 +248,24 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="10" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="tpd-qh-XEn">
-                                                    <rect key="frame" x="44" y="27" width="513" height="31"/>
+                                                    <rect key="frame" x="44" y="37" width="513" height="31"/>
                                                     <connections>
                                                         <action selector="valueChanged:" destination="mc2-1D-lft" eventType="valueChanged" id="H5F-sI-iDo"/>
                                                     </connections>
                                                 </slider>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag the slider bellow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGd-ef-eEV">
+                                                    <rect key="frame" x="230" y="12" width="141" height="17"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="tpd-qh-XEn" firstAttribute="leading" secondItem="UjI-qn-lSD" secondAttribute="leadingMargin" constant="38" id="MKm-Ev-ueT"/>
-                                                <constraint firstItem="tpd-qh-XEn" firstAttribute="centerX" secondItem="UjI-qn-lSD" secondAttribute="centerX" id="Zvc-Cm-CTz"/>
-                                                <constraint firstItem="tpd-qh-XEn" firstAttribute="centerY" secondItem="UjI-qn-lSD" secondAttribute="centerY" id="vm6-s4-c1I"/>
+                                                <constraint firstItem="tpd-qh-XEn" firstAttribute="top" secondItem="BGd-ef-eEV" secondAttribute="bottom" constant="8" symbolic="YES" id="HlQ-In-fTc"/>
+                                                <constraint firstItem="tpd-qh-XEn" firstAttribute="centerX" secondItem="BGd-ef-eEV" secondAttribute="centerX" id="Lsk-95-liW"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="tpd-qh-XEn" secondAttribute="bottom" constant="8" id="NlT-Ys-G4S"/>
+                                                <constraint firstItem="tpd-qh-XEn" firstAttribute="leading" secondItem="UjI-qn-lSD" secondAttribute="leadingMargin" constant="38" id="cT4-M9-hSr"/>
+                                                <constraint firstItem="tpd-qh-XEn" firstAttribute="centerX" secondItem="UjI-qn-lSD" secondAttribute="centerX" id="f7u-Dd-OMg"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -271,7 +289,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ari-8c-PmK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2083" y="1004"/>
+            <point key="canvasLocation" x="1981" y="1004"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Zqd-64-9W2">

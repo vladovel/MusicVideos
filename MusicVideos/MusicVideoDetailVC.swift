@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVFoundation
+import AVKit
 
 class MusicVideoDetailVC: UIViewController {
 
@@ -23,7 +25,7 @@ class MusicVideoDetailVC: UIViewController {
         super.viewDidLoad()
         
         self.navigationItem.title = video.vArtist
-
+ 
         vName.text = video.vName
         vGenre.text = video.vGenre
         vPrice.text = video.vPrice
@@ -37,7 +39,18 @@ class MusicVideoDetailVC: UIViewController {
 
    
     @IBAction func playVideo(sender: AnyObject) {
-        print(video.vName)
+        
+        let url = NSURL(string: video.vVideoUrl)!
+        
+        let player = AVPlayer(URL: url)
+        
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        
+        self.presentViewController(playerViewController, animated: true) {
+            playerViewController.player?.play()
+        }
+    
     }
 
     /*
