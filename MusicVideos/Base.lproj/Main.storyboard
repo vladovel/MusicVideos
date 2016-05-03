@@ -417,6 +417,9 @@
                                 <exclude reference="Y6T-Ps-tVy"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Vqq-iD-Ay1"/>
+                                <exclude reference="4VO-hP-0ts"/>
+                                <include reference="gMd-Uo-wpc"/>
                                 <exclude reference="2rW-Pu-nf2"/>
                                 <exclude reference="31Y-MH-p8k"/>
                                 <exclude reference="PuE-3B-Ya9"/>
@@ -424,9 +427,6 @@
                                 <exclude reference="JND-hE-qJu"/>
                                 <exclude reference="qeC-fj-Hgc"/>
                                 <exclude reference="6sY-4M-Jc8"/>
-                                <include reference="Vqq-iD-Ay1"/>
-                                <exclude reference="4VO-hP-0ts"/>
-                                <include reference="gMd-Uo-wpc"/>
                             </mask>
                         </variation>
                     </view>

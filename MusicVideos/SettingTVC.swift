@@ -85,7 +85,7 @@ class SettingTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         let mailComposeVC = MFMailComposeViewController()
         mailComposeVC.mailComposeDelegate = self
         mailComposeVC.setToRecipients(["vladovel@gmail.com"])
-        mailComposeVC.setSubject("Music Video App Feedback")
+        mailComposeVC.setSubject ("Music Video App Feedback")
         mailComposeVC.setMessageBody("Hi Vlado, \n\n I Would like to share the followong feedback ... \n", isHTML: false)
         return mailComposeVC
     }
@@ -94,7 +94,7 @@ class SettingTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         if indexPath.section == 0 && indexPath.row == 1 {
             let mailComposeViewController = configureMail()
             if MFMailComposeViewController.canSendMail() {
-                self.presentViewController(mailComposeViewController, animated: true, completion: nil)
+                self.presentViewController(mailComposeViewController , animated: true, completion: nil)
             } else {
                 mailAlert()
             }
