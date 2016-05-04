@@ -67,7 +67,7 @@ class MusicVideoTVC: UITableViewController, UISearchResultsUpdating {
         definesPresentationContext = true
         
         resultSearchController.dimsBackgroundDuringPresentation = false
-        resultSearchController.searchBar.placeholder = "Search for Artist"
+        resultSearchController.searchBar.placeholder = "Search by Artist, Name or Rank"
         resultSearchController.searchBar.searchBarStyle = UISearchBarStyle.Prominent
         
         tableView.tableHeaderView = resultSearchController.searchBar
@@ -266,7 +266,7 @@ class MusicVideoTVC: UITableViewController, UISearchResultsUpdating {
     func filterSearch(searchText: String) {
         
         filterSearch = videos.filter { videos in
-            return videos.vArtist.lowercaseString.containsString(searchText.lowercaseString)
+            return videos.vArtist.lowercaseString.containsString(searchText.lowercaseString) || videos.vName.lowercaseString.containsString(searchText.lowercaseString) || "\(videos.vRank)".lowercaseString.containsString(searchText.lowercaseString)
         }
         
         tableView.reloadData()
