@@ -79,6 +79,10 @@ class MusicVideoDetailVC: UIViewController {
                               alert.message = "Unable to Authenticate!"
                         }
                         
+                        dispatch_async(dispatch_get_main_queue()) { [unowned self] in
+                            self.presentViewController(alert, animated: true, completion: nil)
+                        }
+                        
                 }
                             
             })
@@ -98,6 +102,12 @@ class MusicVideoDetailVC: UIViewController {
             default:
                 alert.message = "Local Authentication not available"
             }
+            
+            dispatch_async(dispatch_get_main_queue()) { [unowned self] in
+                self.presentViewController(alert, animated: true, completion: nil)
+            
+            }
+            
         }
         
     }
