@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MusicVideoTVC: UITableViewController {
+class MusicVideoTVC: UITableViewController, UISearchResultsUpdating {
 
     var videos = [Videos]()
     var video: Videos!
@@ -60,6 +60,9 @@ class MusicVideoTVC: UITableViewController {
         
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.redColor()]
         title = "The iTunes Top \(limit) Music Videos"
+        
+        
+        resultSearchController.searchResultsUpdater = self
         
         definesPresentationContext = true
         
@@ -120,7 +123,11 @@ class MusicVideoTVC: UITableViewController {
         
         refreshControl?.endRefreshing()
         
-        runAPI()
+        if resultSearchController.active {
+            refreshControl?.attributedTitle = NSAttributedString(string: "No refresh allowed in search")
+        } else {
+            runAPI()
+        }
         
     }
     
@@ -248,6 +255,22 @@ class MusicVideoTVC: UITableViewController {
                 }
             }
         }
+    }
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        
+        searchController.searchBar.text?.lowercaseString
+        filterSearch(searchController.searchBar.text!)
+    }
+    
+    func filterSearch(searchText: String) {
+        
+        filterSearch = videos.filter { videos in
+            return videos.vArtist.lowercaseString.containsString(searchText.lowercaseString)
+        }
+        
+        tableView.reloadData()
+        
     }
     
 
